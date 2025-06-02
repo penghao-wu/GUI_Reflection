@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="GUI-Reflection: Empowering Multimodal GUI Models with Self-Reflection Behavior">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GUI-Reflection: Empowering Multimodal GUI Models with Self-Reflection Behavior</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+
+
+<section class="hero" style="margin-top: 1rem;">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">GUI-Reflection: Empowering Multimodal GUI Models with Self-Reflection Behavior</h1>
+          <!-- <h4 class="title is-4 publication-title"><span style="color: rgba(250, 66, 66, 0.988);">ICML</span> 2025</h4> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://penghao-wu.github.io/">Penghao Wu</a><sup>1</sup>,</span>
+            <span class="author-block">
+            <span class="author-block">
+              <a>Shengnan Ma</a><sup>2</sup>,</span>
+            <span class="author-block">
+                <a>Bo Wang</a><sup>2</sup>,</span>
+            <span class="author-block">
+                <a>Jiaheng Yu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.tw/citations?user=zdgKJXIAAAAJ&hl">Lewei Lu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://liuziwei7.github.io//">Ziwei Liu</a><sup>1,&#9993</sup>,
+              
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>S-Lab, Nanyang Technological University,</span>
+            <span class="author-block"><sup>2</sup>SenseTime Research</span>&nbsp;&nbsp;
+            <span><small><sup>&#9993</sup>Corresponding Author</small>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/TODO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2406.12275v2"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/penghao-wu/ProxyV"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <!-- <span>Code</span> -->
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/craigwu/gui-reflection-683c7fb964b44c0cca842290"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Data & Model</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/craigwu/proxyv_vicuna_7b_layer12"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Model</span>
+                </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/gui_reflection/gui_reflection_demo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<section class="section" style="margin-top: -4rem;">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Multimodal Large Language Models (MLLMs) have shown great potential in revolutionizing Graphical User Interface (GUI) automation. However, existing GUI models mostly rely on learning from nearly error-free offline trajectories, thus lacking reflection and error recovery capabilities. To bridge this gap, we propose <strong>GUI-Reflection</strong>, a novel framework that explicitly integrates self-reflection and error correction capabilities into end-to-end multimodal GUI models throughout dedicated training stages: GUI-specific pre-training, offline supervised fine-tuning (SFT), and online reflection tuning. GUI-reflection enables self-reflection behavior emergence with fully automated data generation and learning processes without requiring any human annotation. Specifically, <strong>1)</strong> we first propose scalable data pipelines to automatically construct reflection and error correction data from existing successful trajectories. While existing GUI models mainly focus on grounding and UI understanding ability, we propose the <strong>GUI-Reflection Task Suite</strong> to learn and evaluate reflection-oriented abilities explicitly. <strong>2)</strong> Furthermore, we built a diverse and efficient environment for online training and data collection of GUI models on mobile devices. <strong>3)</strong> We also present an iterative online reflection tuning algorithm leveraging the proposed environment, enabling the model to continuously enhance its reflection and error correction abilities. Our framework equips GUI agents with self-reflection and correction capabilities, paving the way for more robust, adaptable, and intelligent GUI automation.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="margin-top: -2rem;">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">GUI-Reflection Framework</h2>
+        <div class="content has-text-centered">
+          <img src="./static/gui_reflection/pipeline.png"
+          class="interpolation-image"
+          alt="Interpolate start reference image."
+          style="width: 80%; height: auto;"/> 
+        </div>
+        <div class="content-text" style="text-align: justify;">
+          We introduce, GUI-Reflection, an automatic framework designed to explicitly integrate self-reflection and error correction capabilities into end-to-end multimodal GUI models throughout different training stages.The GUI-Reflection framework includes (1) Learning basic reflection-oriented skills from GUI-Reflection Task Suite in the GUI pre-training stage; (2) Learning reflection and correction behaviours from automatically generated error scenarios in the offline SFT stage; (3) Continuously enhancing reflection and correction capabilities via reflection tuning in the online learning stage.
+        </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+  </div>
+</section>
+
+<section class="section" style="margin-top: -2rem;">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <!-- ====== CAROUSEL START ======  -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reflection-oriented Abilities: GUI-Reflection Task Suite</h2>
+        <div class="content-text" style="text-align: justify;">
+          In the current paradigm, the GUI pre-training stage mainly targets enhancing the GUI perception capability of the base MLLM and injecting GUI-related knowledge into it. While GUI grounding and understanding are crucial for basic GUI interactions, it is also important to maintain or enhance the model's nascent abilities for self-reflection and error recognition within the GUI context. We decompose such reflection and correction behaviors into smaller reflection-oriented atomic capabilities and design the GUI-Reflection Task Suite to evaluate and learn such capabilities.
+        </div><br>
+        <!-- The carousel container -->
+        <div id="reflection-carousel" class="my-carousel" style="position: relative; overflow: hidden;">
+          <div class="my-item">
+            <!-- Slide #1 content here -->
+            <img
+              src="./static/gui_reflection/action_verification.png"
+              alt="Action Verification Example"
+              style="max-width: 60%; height: auto; display: block; margin: 0 auto;"
+            />
+            <h3 class="subtitle has-text-left" style="margin-top: 1rem;">
+              <b>Action Verification Task</b><br>
+              Recognizing the error or mistake is the very first and crucial step in
+              the reflection and correction process. The Action Verification task tests the models' ability to determine if an implicit action, executed on a previous GUI state, accomplished a specific purpose, based on observing the resulting GUI state outcome.
+            </h3>
+          </div>
+        
+          <div class="my-item">
+            <!-- Slide #2 content here -->
+            <img
+              src="./static/gui_reflection/action_reversal.png"
+              alt="Action Reversal Example"
+              style="max-width: 60%; height: auto; display: block; margin: 0 auto;"
+            />
+            <h3 class="subtitle has-text-left" style="margin-top: 1rem;">
+              <b>Action Reversal Task</b><br>
+              The Action Reversal task addresses the scenario where
+              an undesired or incorrect action has been recognized, and the objective is to determine the subsequent action required to revert the GUI to its state immediately preceding the execution of the original action.
+            </h3>
+          </div>
+
+          <div class="my-item">
+            <!-- Slide #3 content here -->
+            <img
+              src="./static/gui_reflection/reattempt.png"
+              alt="Mistake-informed Reattempt Example"
+              style="max-width: 60%; height: auto; display: block; margin: 0 auto;"
+            />
+            <h3 class="subtitle has-text-left" style="margin-top: 1rem;">
+              <b>Mistake-informed Reattempt Task</b><br>
+              After recognizing an error and potentially reverting the state, a critical
+              reflective capability is to make an informed new attempt based on the known mistakes. In the Mistake-informed Reattempt task, the model is first asked to
+              ground GUI elements based on a given instruction. We then identify the samples that are incorrectly grounded. The model is informed of the prior mistake and is asked to make a new prediction. 
+            </h3>
+          </div>
+        
+          <!-- Add more <div class="my-item">…</div> slides as needed -->
+        </div>
+      </div>
+    </div>
+    <!-- ====== CAROUSEL END ======  -->
+    <!--/ Animation. -->
+  </div>
+</section>
+<script src="./carousel.js"></script>
+
+
+<section class="section" style="margin-top: -2rem;">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reflection Behavior in Offline SFT</h2>
+        <div class="content-text" style="text-align: justify;">
+          During the SFT stage, the GUI model is trained on offline GUI interaction trajectories that are mostly error-free. The ability to recognize possible mistakes based on execution results and the ability to recover or learn from mistakes are greatly limited in such a training approach. Therefore, we design a scalable automatic data pipeline to create realistic reflection and correction data from the existing successful trajectories with two approaches.<br><br>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/gui_reflection/sft_examples_1.png"
+          class="interpolation-image"
+          alt="Interpolate start reference image."
+          style="width: 80%; height: auto;"/> 
+        </div>
+        <div class="content-text" style="text-align: justify;">
+          In the first approach, we modify the original task goal to make an original correct action incorrect. The modified goal is constructed to make the now-incorrect action appear as an easy or natural mistake that a user unfamiliar with the app, button functions, or certain operations might make. Then a reflection step is constructed after the incorrect action. <br><br>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/gui_reflection/sft_examples_2.png"
+          class="interpolation-image"
+          alt="Interpolate start reference image."
+          style="width: 60%; height: auto;"/> 
+        </div>
+        <div class="content-text" style="text-align: justify;">
+        In the second approach, we insert an ineffective incorrect action which should not change the screenshot before a correct action and modify the original correct action by adding reflection content about the inserted ineffective action.
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+  </div>
+</section>
+
+
+<section class="section" style="margin-top: -2rem;">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Iterative Online Reflection Tuning</h2>
+        <div class="content-text" style="text-align: justify;">
+          We developed a specialized environment for efficient online learning, testing, and data collection of mobile GUI agents. We then design an iterative reflection tuning algorithm for the GUI model trained with offline SFT to further improve the general and reflection capabilities through interacting with our online environment.<br><br>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/gui_reflection/reflection_tuning.png"
+          class="interpolation-image"
+          alt="Interpolate start reference image."
+          style="width: 80%; height: auto;"/> 
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+  </div>
+</section>
+
+
+<section class="section" style="margin-top: -2rem;">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-centered">
+          <img src="./static/gui_reflection/exp1.png"
+          class="interpolation-image"
+          alt="Interpolate start reference image."
+          style="width: 80%; height: auto;"/> 
+        </div>
+        <div class="content-text" style="text-align: justify;">
+          By evaluating on our GUI-Reflection Task Suite, we find that large-scale general-purpose MLLMs possess some inherent reflection capabilities in the GUI context, while such capabilities are still very limited in smaller-scale models, and the standard GUI pre-training tends to further diminish these abilities. However, by incorporating training data from our reflection-oriented tasks during the pre-training phase, such essential capabilities can be effectively improved.<br><br>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 2em;">
+          <!-- Left: Image -->
+          <div style="flex: 1; text-align: center;">
+            <img src="./static/gui_reflection/exp2.png"
+                alt="Interpolate start reference image"
+                style="max-width: 100%; height: auto;" />
+          </div>
+  
+          <!-- Right: Justified Text -->
+          <div style="flex: 2; text-align: justify;">
+            <h2 style="font-weight: normal; line-height: 1.6;">
+              By conducting evaluations on our proposed environment, we observe that incorporating reflection data during the offline SFT stage significantly boosts the performance. And when our online reflection tuning algorithm is applied online, the success rate further increases, demonstrating the benefits of explicitly training for reflection at multiple stages.
+            </h2>
+          </div>
+        </div>
+
+
+        <div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 2em;">
+          <!-- Left: Justified Text -->
+          <div style="flex: 2; text-align: justify;">
+            <h2 style="font-weight: normal; line-height: 1.6;">
+              To evaluate our model on more general and comprehensive tasks, we combine the training data collected in the online training stage with a similar-sized subset of the original offline data and fine-tune the offline SFT model to inject valuable reflection experiences while maintaining the generalization ability. We evaluate our model on the AndroidWorld benchmark Our model achieves a competitive success rate of 34.5% among end-to-end models, demonstrating the effectiveness of our proposed framework.
+            </h2>
+          </div>
+
+          <!-- Right: Image -->
+          <div style="flex: 1; text-align: center;">
+            <img src="./static/gui_reflection/exp3.png"
+                alt="Interpolate start reference image"
+                style="max-width: 100%; height: auto;" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      TODO
+      <!-- @article{ProxyV,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021}} -->
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p> 
+            Contact: 
+            <a href="penghao001@e.ntu.edu.sg">penghao001@e.ntu.edu.sg</a><br>
+            This website is adapted from <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

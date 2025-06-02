@@ -8,18 +8,19 @@
 ## Contents:
 1. [Installation](#install)
 2. [Data](#data)
-3. [Evaluation](#evaluation)
-4. [Agent Inference](#inference)
-5. [Training](#training)
-6. [Online Environment](#env)
-7. [License](#license)
-8. [Citation](#citation)
-9. [Acknowledgement](#acknowledgement)
+3. [Model](#model)
+4. [Evaluation](#evaluation)
+5. [Agent Inference](#inference)
+6. [Training](#training)
+7. [Online Environment](#env)
+8. [License](#license)
+9. [Citation](#citation)
+10. [Acknowledgement](#acknowledgement)
 
 ## Installation <a name="install"></a>
 
-Install the `internvl` environment following the guidelines in [InternVL](https://github.com/OpenGVLab/InternVL?tab=readme-ov-file#quick-start-with-huggingface).  
-Add `internvl_chat` to PYTHONPATH: `export PYTHONPATH=$PYTHONPATH:path_to_GUI_Reflection_repo/internvl_chat`
+1. Install the `internvl` environment following the guidelines in [InternVL](https://github.com/OpenGVLab/InternVL?tab=readme-ov-file#quick-start-with-huggingface).  
+2. Add `internvl_chat` to PYTHONPATH: `export PYTHONPATH=$PYTHONPATH:path_to_GUI_Reflection_repo/internvl_chat`
 
 ## Data <a name="data"></a>
 
@@ -29,9 +30,11 @@ GUI_Reflection_Task_Suite_train](https://huggingface.co/datasets/craigwu/GUI_Ref
 The offline SFT data are provided in [GUI_Reflection_SFT_train](https://huggingface.co/datasets/craigwu/GUI_Reflection_SFT_train).  
 The data we provided does not include the source images. You can download the source images from the source datasets accordingly.
 
+## Model <a name="model"></a>
+Our model after the GUI pre-training stage can be found at [GUI_Reflection_8b_pretrain](https://huggingface.co/craigwu/GUI_Reflection_8b_pretrain).  
+Our final GUI agent model can be found at [GUI_Reflection_8b_SFT](https://huggingface.co/craigwu/GUI_Reflection_8b_SFT).
 
 ## Evaluation <a name="evaluation"></a>
-
 We provide the evaluation script to evaluate on the GUI Reflection Task Suite.  
 You should read and correctly set the required fields in `internvl_chat/eval/launch_eval.sh` and launch the evaluation by
 ```

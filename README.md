@@ -63,6 +63,6 @@ TODO
 ```
 
 ## Acknowledgement <a name="acknowledgement"></a>
--  This work is built upon [InternVL]([https://github.com/LLaVA-VL/LLaVA-NeXT](https://github.com/OpenGVLab/InternVL). 
+-  This work is built upon [InternVL](https://github.com/OpenGVLab/InternVL). 
 
 

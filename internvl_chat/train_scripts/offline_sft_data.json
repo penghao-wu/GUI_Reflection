@@ -1,0 +1,51 @@
+{
+    "sft_aitw_20k": {
+      "root": "PATH_TO_AITW_IMAGE_FOLDER",
+      "annotation": "data/sft_aitw_20k.jsonl",
+      "data_augment": false,
+      "repeat_time": 1,
+      "length": 20206
+    },
+    "sft_aitz_14k": {
+      "root": "PATH_TO_AITZ_IMAGE_FOLDER",
+      "annotation": "data/sft_aitz_14k.jsonl",
+      "data_augment": false,
+      "repeat_time": 1,
+      "length": 14686
+    },
+    "sft_amex_39k": {
+      "root": "PATH_TO_AMEX_IMAGE_FOLDER",
+      "annotation": "data/sft_amex_39k.jsonl",
+      "data_augment": false,
+      "repeat_time": 1,
+      "length": 39323
+    },
+    "sft_odyssey_102k": {
+      "root": "PATH_TO_ODYSSEY_IMAGE_FOLDER",
+      "annotation": "data/sft_odyssey_102k.jsonl",
+      "data_augment": false,
+      "repeat_time": 1,
+      "length": 102202
+    },
+    "sft_ac_89k": {
+      "root": "PATH_TO_AC_IMAGE_FOLDER",
+      "annotation": "data/sft_ac_89k.jsonl",
+      "data_augment": false,
+      "repeat_time": 1,
+      "length": 89603
+    },
+    "sft_reflection_modify_goal_17k": {
+      "root": "PATH_TO_AC_IMAGE_FOLDER",
+      "annotation": "data/sft_reflection_modify_goal_17k.jsonl",
+      "data_augment": false,
+      "repeat_time": 1,
+      "length": 17557
+    },
+    "sft_reflection_ineffective_15k": {
+      "root": "PATH_TO_AC_IMAGE_FOLDER",
+      "annotation": "data/sft_reflection_ineffective_15k.jsonl",
+      "data_augment": false,
+      "repeat_time": 1,
+      "length": 15394
+    }
+  }

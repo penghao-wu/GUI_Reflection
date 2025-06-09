@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 from collections import deque
 import re
 
-from internvl_chat.eval.infer import Model
+from eval.infer import Model
 
 SYSTEM_PROMPT = "You are an intelligent and helpful GUI visual agent, well trained to operate the mobile device UI interface. The valid action space is:\nCLICK[[x, y]]. Click the screen at position [x,y].\nLONG_PRESS[[x, y]]. Long press the screen at position [x, y].\nSCROLL[[x1, y1, x2, y2]]. Scroll from the position [x1, y1] to [x2, y2].\nTYPE[text]. Type in the text.\nMEMORIZE[summary: text; content: text]. Store information into the memory.\nANSWER[text]. Answer with the text.\nOPEN_APP[app_name]. Open the app named app_name.\nPRESS_HOME. Go back to the home screen.\nPRESS_BACK. Go back to the previous screen.\nPRESS_ENTER. Press the enter key.\nWAIT. Wait for device response.\nTASK_COMPLETE. Indicate the task is completed.\nTASK_IMPOSSIBLE. Indicate the task is impossible."
 
@@ -123,7 +123,7 @@ class GUI_Reflection_Agent:
   ):
     action_pair_history = construct_action_history(self._actions, self._action_desc)
     if self.temporal_len == 0 or len(self.history_images) == 0:
-        question = QUESTION_TEMPLATE.format(goal, action_pair_history).format(instruction=goal, memory=self.memory, action_pair_history=action_pair_history)
+        question = QUESTION_TEMPLATE.format(instruction=goal, memory=self.memory, action_pair_history=action_pair_history)
         input_images = [image]
     else:
         image_tags = "<image>\n"*len(self.history_images)
@@ -140,7 +140,7 @@ class GUI_Reflection_Agent:
             input_images.append(history_image)
         input_images.append(image)
 
-    response = self.model(question, input_images, self.generation_config)
+    response = self.model(question, input_images, self.generation_config, system_message=SYSTEM_PROMPT)
 
     action = parse_action_output(response, image.size[0], image.size[1])
     action_desc = response.split('<ACTION DESC>:')[-1].split('<ACTION>:')[0].strip()

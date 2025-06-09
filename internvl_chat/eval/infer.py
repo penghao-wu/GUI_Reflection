@@ -6,7 +6,7 @@ import torch
 
 from transformers import AutoTokenizer, AutoModel, AutoConfig
 
-from preprocess import ImageProcessor
+from eval.preprocess import ImageProcessor
 from internvl.conversation import get_conv_template
 from internvl.model.internvl_chat import (
     InternVLChatModel,

@@ -7,8 +7,8 @@ import itertools
 from tqdm import tqdm
 import numpy as np
 
-from infer import Model
-from utils import read_jsonl_file, read_json_file, write_jsonl_file, open_image, InferenceSampler, apply_click_to_image_pil
+from eval.infer import Model
+from eval.utils import read_jsonl_file, write_jsonl_file, open_image, InferenceSampler, apply_click_to_image_pil
 
 
 prompt_format = """<image>\n<image>\nYou are an expert in evaluating the behavior of GUI agents that interact with Android phone interfaces. Your task is to assist in training intelligent agents by identifying the correct **revert operation** to undo a previously executed incorrect operation.

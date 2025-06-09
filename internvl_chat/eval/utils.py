@@ -1,11 +1,6 @@
 import json
 import torch
-import io
 from PIL import Image, ImageDraw
-
-from aoss_client.client import Client
-conf_path = '/mnt/afs1/tianhao2/aoss.conf'
-client = Client(conf_path)
 
 def read_json_file(file_path):
       with open(file_path, 'r', encoding='utf-8') as file:
@@ -23,11 +18,7 @@ def write_jsonl_file(data, path):
             result_file.flush()
 
 def open_image(image_path):
-    if 's3://' in image_path:
-        image = Image.open(io.BytesIO(client.get(image_path)))
-    else:
-        image = Image.open(image_path)
-    return image
+    return Image.open(image_path)
 
 class InferenceSampler(torch.utils.data.sampler.Sampler):
 

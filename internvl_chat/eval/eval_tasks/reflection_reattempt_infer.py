@@ -10,8 +10,8 @@ import numpy as np
 import ast
 import re
 
-from infer import Model
-from utils import read_jsonl_file, read_json_file, write_jsonl_file, open_image, draw_bbox_to_image_pil, InferenceSampler
+from eval.infer import Model
+from eval.utils import read_jsonl_file, write_jsonl_file, open_image, InferenceSampler
 
 prompt_format_first_round = """<image>\nFor the operation: <ref>{}</ref>, output the bounding box of the area in the image that can complete the task."""
 

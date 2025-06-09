@@ -6,9 +6,8 @@ import argparse
 import itertools
 from tqdm import tqdm
 
-from infer import Model
-from utils import read_jsonl_file, read_json_file, write_jsonl_file, open_image, InferenceSampler
-
+from eval.infer import Model
+from eval.utils import read_jsonl_file, write_jsonl_file, open_image, InferenceSampler
 
 prompt_format = """<image>\n<image>\nGiven an action purpose and two screenshots (the first screenshot corresponds to the step before a certain action while the second one is the outcome screenshot after the execution of the action). You need to judge whether the action purpose has been satisfied by the action executed between these screenshots based on the screenshots content. Directly answer Yes or No. 
 

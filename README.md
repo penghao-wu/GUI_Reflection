@@ -1,6 +1,6 @@
 # GUI Reflection: Empowering Multimodal GUI Models with Self-Reflection Behavior
 
-[![Static Badge](https://img.shields.io/badge/GUI_Reflection-paper-red)](https://arxiv.org/abs/2506)
+[![Static Badge](https://img.shields.io/badge/GUI_Reflection-paper-red)](https://arxiv.org/abs/2506.08012)
 [![Static Badge](https://img.shields.io/badge/GUI_Reflection-project_page-green)](https://penghao-wu.github.io/GUI_Reflection/)
 
 ![pipeline](assets/pipeline.png)
@@ -62,7 +62,11 @@ This project is under the Apache-2.0 license. See [LICENSE](LICENSE) for details
 Please consider citing our paper if you find this project helpful for your research:
 
 ```bibtex
-TODO
+@article{GUI_Reflection,
+  author    = {Wu, Penghao and Ma, Shengnan and Wang, Bo and Yu, Jiaheng and Lu, Lewei and Liu, Ziwei},
+  title     = {GUI-Reflection: Empowering Multimodal GUI Models with Self-Reflection Behavior},
+  journal={arXiv preprint arXiv:2506.08012},
+  year={2025}}
 ```
 
 ## Acknowledgement <a name="acknowledgement"></a>

@@ -52,7 +52,7 @@ We provide the training script to perform the offline SFT training in `internvl_
 You need to first prepare the offline SFT data and set the data+image path in `internvl_chat/train_scripts/offline_sft_data.json`.  
 
 ## Online Environment <a name="env"></a>
-TODO
+The environment for GUI Reflection is provided at [gui_reflection_env](https://github.com/penghao-wu/gui_reflection_env).
 
 ## License <a name="license"></a>
 
